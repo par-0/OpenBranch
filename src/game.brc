@@ -1,0 +1,9 @@
+var test
+edt test test_string
+log epic bee ${test} 
+mov function
+log ${test}
+
+def function
+edt test eat_ur_greens
+log ${test}x2
