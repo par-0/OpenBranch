@@ -1,9 +1,25 @@
-var test
-edt test test_string
-log epic bee ${test} 
-mov function
-log ${test}
+txt You see a can of beans.
+opt eat Eat
+opt walk Walk away
 
-def function
-edt test eat_ur_greens
-log ${test}x2
+def eat
+txt You ate some delicious beans.
+txt +10hp +10mn
+jmp mmmbeans
+
+def walk
+txt You walked away from the beans.
+jmp mmmbeans
+
+def mmmbeans
+oclr
+nl
+txt Keep looking around?
+opt look_around Look around
+opt stop_looking Stop looking
+
+def look_around
+txt You found an old pair of jeans and a rusty handgun.
+
+def stop_looking
+txt You decided it was time to leave.

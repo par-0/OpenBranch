@@ -2,20 +2,51 @@
 <html>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <meta charset="UTF-8">
     <title>OpenBranch</title>
+	<style>
+		.base_window {
+			border: 1px solid black;
+			width: 500px;
+			height: 500px;
+			
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -250px;
+			margin-left: -250px;
+		}
+		
+		.text_window {
+			padding: 10px;
+			
+			border-bottom: 1px solid black;
+			width: 480px;
+			height: 380px;
+		}
+		.option_window {
+			padding: 5px;
+			width: 480px;
+			height: 80px;
+		}
+	</style>
 </head>
 
     <body oncontextmenu="return false;">
+		<canvas id="offscreen" width=200 height=1 style="width:0px;height:0px;visibility:hidden"></canvas>
 		<script>
 			DEBUG = false;
 		</script>
     	<script src="util/StringUtil.js"></script>
 		<script src="data/BranchFileFormat.js"></script>  
+		<script src="data/CompiledFileFormat.js"></script>  
 		<input type="file" name="file" id="file"/>	
 		<script src="base.js"></script>  	
 		
+		<div class="base_window"> 
+			<div class="text_window" id="text_id"></div>
+			<div class="option_window" id="option_id"></div>
+		</div>
     </body>
 
 </html>
