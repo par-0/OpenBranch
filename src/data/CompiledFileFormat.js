@@ -14,7 +14,6 @@ var CompiledFileFormat = {
 		
 		for (var i = 0, n = ArrayData.length; i < n; i += 4) {
 			var r = ArrayData[i]; 
-			console.log(r);
 			var g = ArrayData[i+1]; 
 			var b = ArrayData[i+2]; 
 			if (r > 0)
