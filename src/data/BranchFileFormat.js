@@ -72,9 +72,7 @@ var BranchFileFormat = {
 			if (Symbol == "jmp") {
 				for (let name in symbols) {
 					name = name.replace("\r","");
-					console.log(JSON.stringify(name) + " : " + JSON.stringify(Words[1]));
 					if (name == Words[1]) {
-						console.log(name + " : " + Words[1] + "!!!!");
 						var array = symbols[name].Symbols;
 						for (var i = 0; i < array.length; i++) {
 							if (this.ExecuteCode(symbols, array[i])) // if true, stop request
