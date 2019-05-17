@@ -115,7 +115,7 @@ var BranchFileFormat = {
 				// change later maybe
 				document.getElementById("text_id").innerHTML = "";
 			} else if (Symbol == "inc") {
-				this.VariableList[Words[1]] += 1;
+				this.VariableList[Words[1]]++;
 			} else {
 				console.log("Undefined symbol " + Symbol);
 			}
