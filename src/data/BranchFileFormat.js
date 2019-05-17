@@ -98,7 +98,7 @@ var BranchFileFormat = {
 				document.getElementById("option_id").innerHTML += '<a id="option_id_sl" href="#" onclick="' + OnClickEvent + 'return false;">' + OptionName + '</a>';
 			} else if (Symbol == "init") {
 				// Init a variable called [argument 1]
-				this.VariableList[Words[1]] = "";
+				this.VariableList[Words[1]] = 0;
 			} else if (Symbol == "var") {
 				// Edit a variable called [argument 1] and change it's value to [argument 2+]
 				this.VariableList[Words[1]] = IterateString(Words, 2, " ");
