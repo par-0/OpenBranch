@@ -20,6 +20,8 @@ opt stop_looking Stop looking
 
 def look_around
 txt You found an old pair of jeans and a rusty handgun.
+oclr
 
 def stop_looking
 txt You decided it was time to leave.
+oclr
