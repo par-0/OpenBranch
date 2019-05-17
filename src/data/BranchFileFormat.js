@@ -12,6 +12,7 @@
 		oclr: clear options
 		tclr: clear text
 		def: define function start (name) [handled by the preprocessor]
+		inc: increment var (name)
 */
 
 function DebugFindPosition(str1, str2, len) {
@@ -113,6 +114,8 @@ var BranchFileFormat = {
 			} else if (Symbol == "tclr") {
 				// change later maybe
 				document.getElementById("text_id").innerHTML = "";
+			} else if (Symbol == "inc") {
+				this.VariableList[Words[1]] += 1;
 			} else {
 				console.log("Undefined symbol " + Symbol);
 			}
